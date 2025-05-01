@@ -2,6 +2,7 @@
 // conjunto dos números de 1 até 500.
 
 
+
 // 2.Desenvolver um algoritmo que leia a altura de 15 pessoas. Este programa deverá calcular e mostrar :
 // a. A menor altura do grupo;
 // b. A maior altura do grupo;

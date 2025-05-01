@@ -79,47 +79,114 @@ let b = '10';
 console.log(a == b);  // true (apenas valor é comparado)
 console.log(a === b); // false (valor e tipo são comparados)
 
-//7. Faça um algoritmo que leia uma variável e some 5 caso seja par ou some 8 caso seja ímpar,imprimir o resultado desta operação.
+//7. Faça um algoritmo que leia uma variável e some 5 (caso seja par) ou some 8 (caso seja ímpar), imprimir o resultado desta operação.
 let num = 10; // Exemplo de número
 
-// let num % 2 ==
+if (num % 2 === 0) {
+    console.log(num + 5); // Se for par, soma 5
+}
+else {
+    console.log(num + 8); // Se for ímpar, soma 8
+}
 
 //8. Escreva um algoritmo que leia três valores inteiros e diferentes e mostre-os em ordem decrescente.
+//valores inteiros = parseInt
+//ordem descrescente = sort
+
+let valor1 = 10;
+let valor2 = 5;
+let valor3 = 15;
+ const valores = [valor1, valor2, valor3];
+valores.sort((a, b) => b - a); // Coloca em ordem decrescente
 
 // 9. Tendo como dados de entrada a altura e o sexo de uma pessoa, construa um algoritmo que
 // calcule seu peso ideal, utilizando as seguintes fórmulas:
 // ● para homens: (72.7 * h) – 58;
-// ● para mulheres: (62.1 * h) – 44.7. 
+// ● para mulheres: (62.1 * h) – 44.7.
+
+let altura = 1.75; // Exemplo de altura
+let sexo = "M"; // Exemplo de sexo (M ou F)
+
+const pesoIdeal = (sexo === "M") ? (72.7 * `${altura}`) - 58 : (62.1 * `${altura}`) - 44.7;
+console.log(`O peso ideal é: ${pesoIdeal}`);
 
 //10. O IMC – Indice de Massa Corporal é um critério da Organização Mundial de Saúde para dar
-// uma indicação sobre a condição de peso de uma pessoa adulta. A fórmula é IMC = peso / ( altura )2
-// Elabore um algoritmo que leia o peso e a altura de um adulto e mostre sua condição de acordo
+// uma indicação sobre a condição de peso de uma pessoa adulta. A fórmula é IMC = peso / (altura)².
+// Elabore um algoritmo que leia o peso e a altura de um adulto e mostre sua condição de acordo.
 // com a tabela abaixo.
-// IMC em adultos Condição
-// Abaixo de 18,5 Abaixo do peso
-// Entre 18,5 e 25 Peso normal
-// Entre 25 e 30 Acima do peso
-// Acima de 30 obeso
+// IMC em adultos: Condição
+// Abaixo de 18,5 - Abaixo do peso
+// Entre 18,5 e 25 - Peso normal
+// Entre 25 e 30 - Acima do peso
+// Acima de 30 - Obeso
+
+// let altura = 1.75; // Exemplo de altura
+let peso = 70; // Exemplo de peso
+let IMC = peso / (altura * altura); // Cálculo do IMC
+
+if (IMC < 18.5) {
+    console.log("Abaixo do peso");
+}
+
+else if (IMC >= 18.5 && 25) {
+    console.log("Peso normal");
+}
+else if (IMC >= 25 && IMC < 30) {
+    console.log("Acima do peso");
+}
+else (IMC > 30) {
+    console.log("Obeso");
+}
 
 //11. Elabore um algoritmo que calcule o que deve ser pago por um produto, considerando o preço
-// normal deetiqueta e a escolha da condição de pagamento. Utilize os códigos da tabela a seguir
-// para ler qual acondição de pagamento escolhida e efetuar o cálculo adequado.
-// Código Condição de pagamento
+// normal de etiqueta e a escolha da condição de pagamento. Utilize os códigos da tabela a seguir
+// para ler qual a condição de pagamento escolhida e efetuar o cálculo adequado.
+// Código: Condição de pagamento
 // 1 À vista em dinheiro ou cheque, recebe 10% de desconto
 // 2 À vista no cartão de crédito, recebe 15% de desconto
 // 3 Em duas vezes, preço normal de etiqueta sem juros
 // 4 Em duas vezes, preço normal de etiqueta mais juros de 10%
 
+let codigo01 = 0.90 * preço;
+let codigo02 = 0.85 * preço;
+let codigo03 = preço;
+let codigo04 = preço * 1.10; // Preço com juros de 10%
+let preco = 100; // Exemplo de preço do produto
+
+
 //12. Escreva um algoritmo que leia o número de identificação, as 3 notas obtidas por um aluno nas
 // 3 verificações e a média dos exercícios que fazem parte da avaliação, e calcule a média de
 // aproveitamento, usando a fórmula:
-// MA := (nota1 + nota 2 * 2 + nota 3 * 3 + ME)/7
+// MA = (nota1 + nota 2 * 2 + nota 3 * 3 + ME)/7
 // A atribuição dos conceitos obedece a tabela abaixo. O algoritmo deve escrever o número do aluno,
 // suas notas, a média dos exercícios, a média de aproveitamento, o conceito correspondente e a
 // mensagem 'Aprovado' se o conceito for A, B ou C, e 'Reprovado' se o conceito for D ou E.
-// Média de aproveitamento Conceito
-// >= 90 A
-// >= 75 e < 90 B
-// >= 60 e < 75 C
-// >= 40 e < 60 D
-// < 40 E
+// Média de aproveitamento: Conceito
+// >= 90: A
+// >= 75 e < 90: B
+// >= 60 e < 75: C
+// >= 40 e < 60: D
+// < 40: E
+
+//algoritimo = ler: id + nota01 + nota02 + nota03 + mediaExercicios;
+let MA = (nota1 + (nota2 * 2) + (nota3 * 3) + ME) / 7;
+
+let id = 1;
+let nota1 = 10;
+let nota2 = 8;  
+let nota3 = 7;
+let ME = 8; // Média dos exercícios
+
+const algoritmo = {id, nota1, nota2, nota3, ME, MA};
+
+if (MA >= 90) {
+    console.log(algoritmo, "Conceito A - Aprovado");
+} else if (MA >= 75 && MA < 90) {
+    console.log(algoritmo, "Conceito B - Aprovado");
+} else if (MA >= 60 && MA < 75) {
+    console.log(algoritmo, "Conceito C - Aprovado");
+} else if (MA >= 40 && MA < 60) {
+    console.log(algoritmo, "Conceito D - Reprovado");
+} else (MA < 40) {
+    console.log(algoritmo, "Conceito E - Reprovado");
+} 
