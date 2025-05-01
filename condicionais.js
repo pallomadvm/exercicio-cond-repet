@@ -43,21 +43,46 @@ if (numero % 2 === 0) {
 
 
 //4. Faça um algoritmo que leia dois valores inteiros A e B.  Se os valores forem iguais deverá se somar os dois, 
-// caso contrário multiplique A por B. Ao final de qualquer um dos cálculos deve-se atribuir o resultado para uma
+// caso contrário, multiplique A por B. Ao final de qualquer um dos cálculos, deve-se atribuir o resultado para uma
 //  variável C e mostrar seu conteúdo na tela.
 
-let X = 5;
-let Y = 8;
+let X = 5; //A
+let Y = 8; //B
 
-let X + Y = soma;
-let C = soma
+let soma4= X + Y;
+let multiplicação = X * Y;
 
+if (X == Y) {
+     console.log("Os valores são iguais. A soma é: " + soma4);
+}
+else {
+    console.log("Os valores são diferentes. A multiplicação é: " + multiplicação);
+}
+
+let Z = (X == Y) ? soma4 : multiplicação; //Z = C
 
 //5. Encontrar o dobro de um número caso ele seja positivo e o seu triplo caso seja negativo, imprimindo o resultado.
 
+let number = 5; // Exemplo de número positivo
+
+if (number > 0) {
+    console.log((number * number)); // Dobro
+}
+    else {
+        console.log((number * number * number)); // Triplo
+    }
+
 //6. Escreva um algoritmo que lê dois valores booleanos (lógicos) e então determina se ambos são VERDADEIROS ou FALSOS.
 
+let a = 10;
+let b = '10';
+console.log(a == b);  // true (apenas valor é comparado)
+console.log(a === b); // false (valor e tipo são comparados)
+
 //7. Faça um algoritmo que leia uma variável e some 5 caso seja par ou some 8 caso seja ímpar,imprimir o resultado desta operação.
+let num = 10; // Exemplo de número
+
+// let num % 2 ==
 
 //8. Escreva um algoritmo que leia três valores inteiros e diferentes e mostre-os em ordem decrescente.
 
